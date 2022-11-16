@@ -1,1 +1,75 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+body {
+  background-color: hsl(0deg, 0%, 95%);
+  font-family: "Lexend Deca", sans-serif;
+  margin: 2rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  border-radius: 1rem;
+  min-width: 33rem;
+  overflow: hidden;
+}
+@media only screen and (min-width: 576px) {
+  .wrapper {
+    display: flex;
+    max-width: 92rem;
+  }
+}
+
+.card {
+  padding: 5rem;
+}
+.card--orange {
+  background-color: hsl(31deg, 77%, 52%);
+}
+.card--cyan {
+  background-color: hsl(184deg, 100%, 22%);
+}
+.card--dark-cyan {
+  background-color: hsl(179deg, 100%, 13%);
+}
+.card__image, .card__title {
+  margin-bottom: 3rem;
+}
+.card__title {
+  color: hsl(0deg, 0%, 95%);
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.card__description {
+  color: hsla(0deg, 0%, 100%, 0.75);
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+@media only screen and (min-width: 576px) {
+  .card__description {
+    margin-bottom: 8.5rem;
+  }
+}
+
+.btn {
+  font-size: 1.5rem;
+  font-weight: 400;
+  background-color: hsl(0deg, 0%, 95%);
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  padding: 2rem 3.5rem;
+}
+.btn--orange {
+  color: hsl(31deg, 77%, 52%);
+}
+.btn--cyan {
+  color: hsl(184deg, 100%, 22%);
+}
+.btn--dark-cyan {
+  color: hsl(179deg, 100%, 13%);
+}/*# sourceMappingURL=style.css.map */

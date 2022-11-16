@@ -1,10 +1,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+@import './variables';
 
 @mixin font-style($font-size: 1.5rem, $font-weight: 400) {
   font-size: $font-size;
   font-weight: $font-weight;
 }
+@mixin display-flex(
+  $display: flex,
+  $justify-content: center,
+  $align-items: center
+) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+@mixin min-width($value) {
+  @media only screen and (min-width: $value) {
+    @content;
+  }
+}
 
 body {
+  background-color: $primary-color;
   font-family: 'Lexend Deca', sans-serif;
+  margin: 2rem;
+  min-height: 100vh;
+  @include display-flex();
+}
+.wrapper {
+  border-radius: 1rem;
+  min-width: 33rem;
+  overflow: hidden;
+  @include min-width(576px) {
+    display: flex;
+    max-width: 92rem;
+  }
+}
+.card {
+  padding: 5rem;
+  &--orange {
+    background-color: $bright-orange;
+  }
+  &--cyan {
+    background-color: $dark-cyan;
+  }
+  &--dark-cyan {
+    background-color: $very-dark-cyan;
+  }
+  &__image,
+  &__title {
+    margin-bottom: 3rem;
+  }
+  &__title {
+    color: $primary-color;
+    font-family: 'Big Shoulders Display', cursive;
+    @include font-style(3.5rem, 700);
+    text-transform: uppercase;
+  }
+  &__description {
+    color: $secondary-color;
+    margin-bottom: 3rem;
+    @include font-style();
+    @include min-width(576px) {
+      margin-bottom: 8.5rem;
+    }
+  }
+}
+.btn {
+  @include font-style();
+  background-color: $primary-color;
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  padding: 2rem 3.5rem;
+  &--orange {
+    color: $bright-orange;
+  }
+  &--cyan {
+    color: $dark-cyan;
+  }
+  &--dark-cyan {
+    color: $very-dark-cyan;
+  }
 }
