@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+@mixin font-style($font-size: 1.5rem, $font-weight: 400) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+}
